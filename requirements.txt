@@ -1,0 +1,43 @@
+# ==========================================
+# VidRAG Advanced - Python Requirements
+# ==========================================
+
+# Backend
+fastapi>=0.115
+uvicorn[standard]>=0.30
+python-dotenv>=1.0
+pydantic>=2.8
+email-validator>=2.2
+PyJWT>=2.9
+python-multipart>=0.0.9
+
+# YouTube and Video Processing
+youtube-transcript-api>=1.2
+yt-dlp>=2025.1.0
+opencv-python-headless>=4.10
+
+# Vector Database
+qdrant-client>=1.12
+
+# LangChain
+langchain-core>=0.3
+langchain-qdrant>=0.2
+langchain-huggingface>=0.1
+
+# AI Models and Providers
+langchain-openai>=0.3
+langchain-google-genai>=2.0
+langchain-ollama>=0.3.6
+
+# Embeddings and Retrieval
+sentence-transformers>=3.0
+rank-bm25>=0.2
+
+# Document Processing
+pypdf>=5.0
+python-docx>=1.1
+python-pptx>=1.0
+Pillow>=10.0
+
+# Testing
+pytest>=8.0

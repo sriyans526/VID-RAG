@@ -1,0 +1,12 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+*{box-sizing:border-box}body{font-family:Arial,sans-serif;width:380px;height:570px;margin:0;display:flex;flex-direction:column;background:#0b1020;color:#eef2ff}
+header{padding:13px;background:#121a30;border-bottom:1px solid #27324e}header strong{font-size:16px}header small{display:block;color:#9eaccb;margin-top:4px}
+#controls{display:flex;gap:7px;padding:9px;background:#0f172a}select,input,button{font:inherit;border:1px solid #33415f;border-radius:8px;padding:9px;background:#141f37;color:#f8fafc}select{flex:1;min-width:0}
+#chat{flex:1;overflow:auto;padding:10px;display:flex;flex-direction:column;gap:8px}.msg{padding:10px;border-radius:12px;max-width:96%;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.45;font-size:13px}.user{background:#2457d6;align-self:flex-end}.bot{background:#17233b;border:1px solid #2a3958;align-self:flex-start}
+#inputArea{padding:10px;display:flex;gap:7px;border-top:1px solid #27324e}#query{flex:1;min-width:0}button{cursor:pointer;background:#3568f5;border-color:#3568f5;font-weight:600}button:disabled{opacity:.5}#status{padding:0 10px 8px;color:#9eaccb;font-size:11px}.jump{display:block;color:#7dd3fc;cursor:pointer;text-decoration:underline;margin-top:6px}
+</style></head><body>
+<header><strong>VidRAG</strong><small>Multilingual YouTube learning assistant</small></header>
+<div id="controls"><select id="language"><option value="auto">Auto language</option><option value="en">English</option><option value="hi">Hindi</option><option value="mr">Marathi</option><option value="es">Spanish</option><option value="fr">French</option><option value="de">German</option><option value="ja">Japanese</option><option value="zh">Chinese</option><option value="ar">Arabic</option></select><button id="processBtn">Process</button></div>
+<div id="chat" aria-live="polite"></div><div id="status">Configure an access token in extension local storage; see README.</div>
+<div id="inputArea"><input id="query" placeholder="Ask about this video..." autocomplete="off"><button id="askBtn">Ask</button></div><script src="popup.js"></script></body></html>
