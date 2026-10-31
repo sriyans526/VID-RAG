@@ -151,7 +151,7 @@ def process_video(body:Process,request:Request,user=Depends(auth_user)):
     except ValueError as exc: raise HTTPException(400,str(exc))
     except Exception as exc:
         log.exception("Video processing failed")
-        raise HTTPException(502,"Video processing failed. Check transcript availability, Qdrant and model configuration.")
+        raise HTTPException(502, f"Video processing failed: {exc}")
 
 @app.post("/ask")
 def ask(body:Ask,request:Request,user=Depends(auth_user)):
@@ -171,9 +171,9 @@ def ask(body:Ask,request:Request,user=Depends(auth_user)):
               (user["id"],body.video_id,"assistant",result.get("answer",""),json.dumps(result,ensure_ascii=False)))
         return result
     except ValueError as exc: raise HTTPException(400,str(exc))
-    except Exception:
+    except Exception as exc:
         log.exception("Answer generation failed")
-        raise HTTPException(502,"Answer generation failed. Check that the video is processed and the LLM is configured.")
+        raise HTTPException(502, f"Answer generation failed: {exc}")
 
 @app.get("/videos/library")
 def library(user=Depends(auth_user)):
