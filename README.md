@@ -6,6 +6,10 @@
 [![Qdrant](https://img.shields.io/badge/Qdrant-Vector_DB-DC382D?style=flat-square&logo=qdrant&logoColor=white)](https://qdrant.tech)
 [![LangChain](https://img.shields.io/badge/LangChain-0.3+-1C3C3C?style=flat-square&logo=langchain&logoColor=white)](https://www.langchain.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![Live Demo](https://img.shields.io/badge/Demo-Live_on_Render-46E3B7?style=flat-square&logo=render&logoColor=white)](https://vidrag-platform.onrender.com)
+
+> 🚀 **Live Production Deployment**: [https://vidrag-platform.onrender.com](https://vidrag-platform.onrender.com)  
+> 📖 **Interactive API Docs (Swagger UI)**: [https://vidrag-platform.onrender.com/docs](https://vidrag-platform.onrender.com/docs)
 
 > **VidRAG** is an enterprise-grade multimodal Retrieval-Augmented Generation (RAG) platform that transforms lengthy YouTube videos and technical documents into interactive, source-grounded knowledge bases. It features semantic video search, timestamp-cited question answering, multilingual translation, automated AI study tools (quizzes, flashcards, mind maps, learning paths), multi-source cross-retrieval, and a Chrome browser extension.
 
