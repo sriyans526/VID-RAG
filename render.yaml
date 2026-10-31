@@ -11,7 +11,7 @@ services:
       - key: PYTHON_VERSION
         value: 3.11.9
       - key: NODE_VERSION
-        value: 20.11.0
+        value: 22.12.0
       - key: LLM_PROVIDER
         value: ollama_cloud
       - key: OLLAMA_API_KEY
