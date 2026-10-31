@@ -1,0 +1,38 @@
+services:
+  - type: web
+    name: vidrag-platform
+    env: python
+    plan: free
+    region: oregon
+    buildCommand: "pip install -r requirements.txt && cd frontend && npm install && npm run build && cd .."
+    startCommand: "uvicorn main:app --host 0.0.0.0 --port $PORT"
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: NODE_VERSION
+        value: 20.11.0
+      - key: LLM_PROVIDER
+        value: ollama_cloud
+      - key: OLLAMA_API_KEY
+        sync: false
+      - key: OLLAMA_CLOUD_BASE_URL
+        value: https://ollama.com/v1
+      - key: OLLAMA_CLOUD_MODEL
+        value: nemotron-3-nano:30b-cloud
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-2.5-flash
+      - key: QDRANT_URL
+        sync: false
+      - key: QDRANT_API_KEY
+        sync: false
+      - key: QDRANT_COLLECTION
+        value: vidrag_transcripts
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DATABASE_PATH
+        value: ./data/vidrag.db
+      - key: CORS_ORIGINS
+        value: "*"
